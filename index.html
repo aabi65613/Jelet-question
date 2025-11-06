@@ -489,34 +489,65 @@
     99: { answer: "(B) R₁R₃ = R₂R₄", explanation: "For Wheatstone bridge balance condition: R₁R₃ = R₂R₄. When balanced, no current flows through galvanometer", hasFormula: true, formula: "Wheatstone bridge balance: R₁R₃ = R₂R₄" },
     100: { answer: "(D) 0", explanation: "Purely inductive circuit: current lags voltage by 90°. Power factor = cosφ = cos90° = 0", hasFormula: true, formula: "Power factor = cosφ<br>For pure inductor: φ = 90°<br>cos90° = 0" }
 };  function showExplanation(questionNumber) {
-    const data = explanations[questionNumber];
-    
-    let content = `
-        <div class="question-number">Question ${questionNumber}</div>
-        <div class="explanation">
-            <strong>Correct Answer:</strong> ${data.answer}<br><br>
-            <strong>Explanation:</strong> ${data.explanation}
-        </div>
-    `;
-    
-    if (data.hasFormula) {
-        content += `<a href="javascript:void(0)" class="formula-link" onclick="showFormulaPage(${questionNumber})">Click here to see formulas used</a>`;
-    }
-    
-    document.getElementById('modalContent').innerHTML = content;
-    document.getElementById('explanationModal').style.display = 'block';
-}
+            const data = explanations[questionNumber];
+            let content = `
+                <div class="question-number">Question ${questionNumber}</div>
+                <div class="explanation">
+                    <strong>Correct Answer:</strong> ${data.answer}<br><br>
+                    <strong>Explanation:</strong> ${data.explanation}
+                </div>
+            `;
+            
+            if (data.hasFormula) {
+                content += `<a href="#" class="formula-link" onclick="showFormulaPage(${questionNumber})">Click here to see formulas used</a>`;
+            }
+            
+            document.getElementById('modalContent').innerHTML = content;
+            document.getElementById('explanationModal').style.display = 'block';
+        }
 
-function showFormulaPage(questionNumber) {
-    const data = explanations[questionNumber];
-    document.getElementById('formulaContent').innerHTML = `
-        <h2>Formulas Used in Question ${questionNumber}</h2>
-        <div class="formula-list">${data.formula}</div>
-    `;
-    document.getElementById('formulaPage').style.display = 'block';
-    document.getElementById('explanationModal').style.display = 'none';
-}
+        function closeModal() {
+            document.getElementById('explanationModal').style.display = 'none';
+        }
 
-function hideFormulaPage() {
-    document.getElementById('formulaPage').style.display = 'none';
-}
+        function showFormulaPage(questionNumber) {
+            const data = explanations[questionNumber];
+            document.getElementById('formulaContent').innerHTML = `
+                <h2>Formulas Used in Question ${questionNumber}</h2>
+                <div class="formula-list">${data.formula}</div>
+            `;
+            document.getElementById('formulaPage').style.display = 'block';
+            document.getElementById('explanationModal').style.display = 'none';
+        }
+
+        function hideFormulaPage() {
+            document.getElementById('formulaPage').style.display = 'none';
+        }
+
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+        }
+
+        window.onclick = function(event) {
+            const modal = document.getElementById('explanationModal');
+            if (event.target == modal) closeModal();
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const questions = document.querySelectorAll('.question-card');
+            questions.forEach((question, index) => {
+                const questionNum = index + 1;
+                const correctAnswer = explanations[questionNum]?.answer;
+                if (correctAnswer) {
+                    const options = question.querySelectorAll('.option');
+                    options.forEach(option => {
+                        if (option.textContent.trim() === correctAnswer) {
+                            option.classList.add('correct-option');
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
