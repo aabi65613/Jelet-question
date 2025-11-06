@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+    <html lang='en'>
+    <head>
+        <meta charset='UTF-8'>
+        <title>Generated Site</title>
+        <style>
+            body {
+                background-color: #121212;
+                color: white;
+                font-family: Arial, sans-serif;
+                text-align: center;
+                padding: 2rem;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>This site was built using GPT-4o</h1>
+        <p>You want to create a website with the following features:
+
+1. A question page displaying the question and its answer.
+2. The explanation for the answer is hidden initially.
+3. When the user clicks on the answer, the explanation is revealed.
+4. Within the explanation, there's a link to a formula page.
+5. The formula page lists formulas used for solving questions, with references to the question numbers.
+
+Here's a high-level approach to achieve this:
+
+Website Structure
+1. *Question Page*:
+    - Display question, answer, and a hidden explanation section.
+    - Use JavaScript to toggle the explanation visibility when the answer is clicked.
+2. *Explanation Section*:
+    - Include a link to the formula page, highlighting the relevant question number.
+3. *Formula Page*:
+    - List formulas with references to question numbers that use them.
+
+I have my own source code were the question and answer was written % ---------------------- Block: Mathematics (Q1 - Q40) ----------------------
+\section*{Mathematics (Q1--Q40)}
+
+\begin{enumerate}[leftmargin=10pt,label=\textbf{Q\arabic*.}]
+
+\item
+\Topic{Matrix – Orthogonal Matrices}
+\From{Diploma Mathematics--II, Unit: Determinants & Matrices}
+\Level{12th / Diploma}
+\Question{If $A$ and $B$ are orthogonal matrices and $\det(A)+\det(B)=0$, prove that $A+B$ is singular.}
+\Explain{Orthogonal matrices have determinant $\pm1$. The condition forces one determinant $+1$ and the other $-1$. Consider $B^{-1}A$; its determinant is $\det(A)/\det(B)=-1$. An orthogonal matrix with determinant $-1$ has eigenvalue $-1$, so $\exists x\neq0$ with $B^{-1}Ax=-x$. Multiply by $B$ to get $Ax=-Bx$, hence $(A+B)x=0$ for nonzero $x$. So $A+B$ is singular.}
+\Answer{$A+B$ is singular.}
+\Formula{$\det(AB)=\det(A)\det(B)$; orthogonal: $A^{T}A=I$.}
+
+\item
+\Topic{Determinant — Eigenvalues}
+\From{Diploma Mathematics--II, Unit: Determinants & Matrices}
+\Level{12th}
+\Question{If a $2\times2$ matrix has eigenvalues $3$ and $4$, find $\det(A)$.}
+\Explain{For any square matrix, the determinant equals the product of its eigenvalues. So $\det(A)=3\times4=12$.}
+\Answer{$12$}
+\Formula{$\det(A)=\prod \lambda_i$.}
+
+\item
+\Topic{Limits}
+\From{Diploma Mathematics--I, Unit: Calculus}
+\Level{11th}
+\Question{Evaluate $\displaystyle\lim_{x\to0}\frac{\sin 3x}{x}$.}
+\Explain{Use $\lim_{t\to0}\frac{\sin t}{t}=1$. Put $t=3x$, so $\frac{\sin3x}{x}=\frac{\sin3x}{3x}\cdot3\to3$.}
+\Answer{$3$}
+\Formula{$\lim_{t\to0}\frac{\sin t}{t}=1$.}
+
+\item
+\Topic{Differentiation}
+\From{Diploma Mathematics--I, Unit: Differential Calculus}
+\Level{11th}
+\Question{Find $\dfrac{d}{dx}(x^{3}\sin x)$.}
+\Explain{Use product rule: $(uv)'=u'v+uv'$. Here $u=x^{3},v=\sin x$, so derivative is $3x^{2}\sin x + x^{3}\cos x$.}
+\Answer{$3x^{2}\sin x + x^{3}\cos x$}
+\Formula{Product rule $(uv)'=u'v+uv'$.}
+
+\item
+\Topic{Coordinate Geometry — Circle Tangent}
+\From{Diploma Mathematics--II, Unit: Coordinate Geometry}
+\Level{11th}
+\Question{Length of tangent from $(2,3)$ to circle $x^{2}+y^{2}=5$?}
+\Explain{Tangent length formula: $\sqrt{x_{1}^{2}+y_{1}^{2}-r^{2}}$. Here $x_{1}^{2}+y_{1}^{2}=4+9=13$ and $r^{2}=5$. So length $=\sqrt{13-5}=\sqrt8=2\sqrt2$.}
+\Answer{$2\sqrt2$}
+\Formula{Tangent length $\sqrt{x_{1}^{2}+y_{1}^{2}-r^{2}}$.}
+
+\item
+\Topic{Partial Differentiation}
+\From{Diploma Mathematics--II, Unit: Partial Differentiation}
+\Level{12th}
+\Question{Find stationary point of $f(x,y)=x^{2}+2y^{2}-4x+8y$.}
+\Explain{Set partial derivatives to zero: $f_x=2x-4=0\Rightarrow x=2$, $f_y=4y+8=0\Rightarrow y=-2$. Hessian diagonal $(2,4)$ positive ⇒ local minimum at $(2,-2)$.}
+\Answer{$(2,-2)$ (local minimum)}
+\Formula{Critical point from $f_x=f_y=0$; Hessian positivity for minimum.}
+
+\item
+\Topic{Vector Dot Product}
+\From{Diploma Mathematics--I, Unit: Vectors}
+\Level{11th}
+\Question{Compute $\vec a\cdot\vec b$ for $\vec a=(1,2,3)$ and $\vec b=(2,-1,1)$.}
+\Explain{Dot product = sum of component-wise products: $1\cdot2 + 2\cdot(-1)+3\cdot1 =2-2+3=3$.}
+\Answer{$3$}
+\Formula{$\vec a\cdot\vec b=\sum a_i b_i$.}
+
+\item
+\Topic{Combinations / Probability}
+\From{Diploma Mathematics--II, Unit: Probability & Statistics}
+\Level{11th}
+\Question{From 5 men and 4 women choose committee of 3 with at least one woman. How many ways?}
+\Explain{Total ways $C(9,3)=84$. All-male committees $C(5,3)=10$. So at least one woman: $84-10=74$.}
+\Answer{$74$ ways}
+\Formula{$C(n,r)=\dfrac{n!}{r!(n-r)!}$.}
+
+\item
+\Topic{Quadratic — Vieta}
+\From{Diploma Mathematics--I, Unit: Algebra}
+\Level{10th}
+\Question{For $x^{2}-5x+6=0$, find sum and product of roots.}
+\Explain{For $ax^{2}+bx+c=0$, sum $= -b/a$, product $= c/a$. So sum $=5$, product $=6$.}
+\Answer{$\alpha+\beta=5,\ \alpha\beta=6$}
+\Formula{Vieta's relations.}
+
+\item
+\Topic{Sequences — Sum of Naturals}
+\From{Diploma Mathematics--I, Unit: Sequences}
+\Level{10th}
+\Question{Sum of first $n$ natural numbers?}
+\Explain{Pairing method: $(1+n),(2+n-1),\dots$ gives $n/2$ pairs each sum $n+1$. So $S_n=\dfrac{n(n+1)}{2}$.}
+\Answer{$\dfrac{n(n+1)}{2}$}
+\Formula{$S_n=\dfrac{n(n+1)}{2}$.}
+
+\item
+\Topic{Differential Equation — Separable}
+\From{Diploma Mathematics--I, Unit: Differential Equations}
+\Level{11th}
+\Question{Solve $y'=3y$.}
+\Explain{Separate variables: $\dfrac{dy}{y}=3,dx$. Integrate: $\ln|y|=3x+C$. So $y=Ce^{3x}$ where $C$ is constant.}
+\Answer{$y=Ce^{3x}$}
+\Formula{Separable ODE solution $y=Ce^{kx}$.}
+
+\item
+\Topic{Trigonometric Identity}
+\From{Diploma Mathematics--I, Unit: Trigonometry}
+\Level{10th}
+\Question{Show $\sin^{2}\theta+\cos^{2}\theta=1$.}
+\Explain{On unit circle a point has coordinates $(\cos\theta,\sin\theta)$ whose distance from origin is 1, so $\cos^{2}\theta+\sin^{2}\theta=1$ (Pythagoras).}
+\Answer{$1$}
+\Formula{Pythagorean identity.}
+
+\item
+\Topic{Complex Modulus}
+\From{Diploma Mathematics--I, Unit: Complex Numbers}
+\Level{11th}
+\Question{Find $|1+i|$.}
+\Explain{Modulus $=\sqrt{1^{2}+1^{2}}=\sqrt2$.}
+\Answer{$\sqrt2$}
+\Formula{$|a+ib|=\sqrt{a^{2}+b^{2}}$.}
+
+\item
+\Topic{Binomial Probability}
+\From{Diploma Mathematics--II, Unit: Probability}
+\Level{11th}
+\Question{Probability of exactly 2 heads in 3 fair coin tosses?}
+\Explain{Number of favourable outcomes $C(3,2)=3$. Total outcomes $2^{3}=8$. Probability $=3/8$.}
+\Answer{$\dfrac{3}{8}$}
+\Formula{Binomial: $P(k)=C(n,k)p^{k}(1-p)^{n-k}$.}
+
+\item
+\Topic{Matrix — Invertibility}
+\From{Diploma Mathematics--II, Unit: Determinants}
+\Level{12th}
+\Question{If $\det(A)=0$, does $A^{-1}$ exist?}
+\Explain{No. Determinant zero means matrix is singular and rows (or columns) are linearly dependent, so inverse does not exist.}
+\Answer{No}
+\Formula{Invertible iff $\det(A)\neq0$.}
+
+\item
+\Topic{Integration — By Parts}
+\From{Diploma Mathematics--II, Unit: Integration}
+\Level{11th}
+\Question{Evaluate $\displaystyle\int x e^{x},dx$.}
+\Explain{Let $u=x$, $dv=e^{x}dx$. Then $du=dx$, $v=e^{x}$. So integral $=x e^{x}-\int e^{x}dx = e^{x}(x-1)+C$.}
+\Answer{$e^{x}(x-1)+C$}
+\Formula{$\int u,dv = uv-\int v,du$.}
+
+\item
+\Topic{Mechanics Concept — Work (math link)}
+\From{Engineering Mechanics, Unit: Work & Energy}
+\Level{Diploma}
+\Question{Work by constant force $\vec F$ over displacement $\vec s$?}
+\Explain{Work is dot product: $W=\vec F\cdot\vec s=Fs\cos\theta$, only component of force along displacement does work.}
+\Answer{$W=\vec F\cdot\vec s$}
+\Formula{$W=\vec F\cdot\vec s$.}
+
+\item
+\Topic{Thermodynamics Formula}
+\From{Thermal Engg.--I, Unit: Ideal Gas}
+\Level{Diploma}
+\Question{Work in reversible isothermal expansion of ideal gas?}
+\Explain{For isothermal $T$ constant and $P=nRT/V$. Integrate $W=\int_{V_i}^{V_f}P,dV = nRT\ln\frac{V_f}{V_i}$.}
+\Answer{$W=nRT\ln\frac{V_f}{V_i}$}
+\Formula{$PV=nRT$.}
+
+\item
+\Topic{Statics — Moment}
+\From{Engineering Mechanics, Unit: Statics}
+\Level{Diploma}
+\Question{Moment of force $F$ at perpendicular distance $d$?}
+\Explain{Moment (turning effect) $M=F\times d$; vector form $\vec M=\vec r\times\vec F$. Unit N·m.}
+\Answer{$M=Fd$}
+\Formula{$M=\vec r\times\vec F$.}
+
+\item
+\Topic{Stress}
+\From{Materials—Basic Concepts}
+\Level{Diploma}
+\Question{Define stress.}
+\Explain{Stress is internal force per unit area: $\sigma=\dfrac{F}{A}$.}
+\Answer{$\sigma=\dfrac{F}{A}$}
+\Formula{$\sigma=F/A$.}
+
+\item
+\Topic{Set Probability}
+\From{Diploma Mathematics--II, Unit: Probability}
+\Level{11th}
+\Question{Given $P(A)=0.4$, $P(B)=0.5$, $P(A\cap B)=0.2$, find $P(A\cup B)$.}
+\Explain{Use inclusion-exclusion: $P(A\cup B)=P(A)+P(B)-P(A\cap B)=0.4+0.5-0.2=0.7$.}
+\Answer{$0.7$}
+\Formula{$P(A\cup B)=P(A)+P(B)-P(A\cap B)$.}
+
+\item
+\Topic{Matrix Rank}
+\From{Diploma Mathematics--II, Unit: Matrices}
+\Level{12th}
+\Question{If a $3\times3$ matrix has two identical rows, what is its rank?}
+\Explain{Two identical rows are linearly dependent, so rank $\le2$.}
+\Answer{At most $2$}
+\Formula{Rank decreases with linear dependence.}
+
+\item
+\Topic{Resistors — Series}
+\From{Basic Electrical Engg., Unit: Circuits}
+\Level{Diploma}
+\Question{Equivalent resistance of resistors in series $R_1,R_2,\dots$ ?}
+\Explain{Series resistors add: $R_{eq}=\sum R_i$.}
+\Answer{$R_{eq}=\sum R_i$}
+\Formula{Series sum rule.}
+
+\item
+\Topic{Equation of Line}
+\From{Diploma Mathematics--II, Unit: Coordinate Geometry}
+\Level{11th}
+\Question{Equation of line through $(x_1,y_1)$ with slope $m$?}
+\Explain{Point-slope form: $y-y_1=m(x-x_1)$.}
+\Answer{$y-y_1=m(x-x_1)$}
+\Formula{Point-slope form.}
+
+\item
+\Topic{Mean & Variance}
+\From{Diploma Mathematics--II, Unit: Statistics}
+\Level{11th}
+\Question{Define sample mean and (population) variance for data $x_i$.}
+\Explain{Mean $\bar x=\dfrac{1}{n}\sum x_i$. Population variance $\sigma^{2}=\dfrac{1}{n}\sum (x_i-\bar x)^{2}$.}
+\Answer{$\bar x=\dfrac{1}{n}\sum x_i,\ \sigma^{2}=\dfrac{1}{n}\sum (x_i-\bar x)^{2}$}
+\Formula{Mean and variance definitions.}
+
+\item
+\Topic{Implicit Differentiation}
+\From{Diploma Mathematics--II, Unit: Calculus}
+\Level{11th}
+\Question{For $y^{2}=4ax$, find $\dfrac{dy}{dx}$.}
+\Explain{Differentiate: $2y,\dfrac{dy}{dx}=4a \Rightarrow \dfrac{dy}{dx}=\dfrac{2a}{y}$.}
+\Answer{$\dfrac{2a}{y}$}
+\Formula{Implicit differentiation.}
+
+\item
+\Topic{Conditional Probability}
+\From{Diploma Mathematics--II, Unit: Probability}
+\Level{11th}
+\Question{Given $P(A)=0.5,P(B)=0.4,P(A\cap B)=0.2$, find $P(A|B)$.}
+\Explain{$P(A|B)=\dfrac{P(A\cap B)}{P(B)}=\dfrac{0.2}{0.4}=0.5$.}
+\Answer{$0.5$}
+\Formula{$P(A|B)=\dfrac{P(A\cap B)}{P(B)}$.}
+
+\item
+\Topic{Trace}
+\From{Diploma Mathematics--II, Unit: Matrices}
+\Level{12th}
+\Question{If eigenvalues of $A$ are $2,3,4$, what is $\operatorname{tr}(A)$?}
+\Explain{Trace equals sum of eigenvalues: $2+3+4=9$.}
+\Answer{$9$}
+\Formula{$\operatorname{tr}(A)=\sum \lambda_i$.}
+
+\item
+\Topic{Rolle's Theorem}
+\From{Diploma Mathematics--I, Unit: Calculus}
+\Level{11th}
+\Question{Show that for $f(x)=x^{3}-3x$ on $[-2,2]$ there exists $c$ with $f'(c)=0$.}
+\Explain{$f(-2)=f(2)$ and $f$ is continuous and differentiable, so Rolle's theorem guarantees some $c$ with $f'(c)=0$. Compute $f'(x)=3x^{2}-3$, zeros at $x=\pm1$ inside interval.}
+\Answer{Yes; $x=\pm1$}
+\Formula{Rolle's theorem conditions.}
+
+\item
+\Topic{Parabola Focus}
+\From{Diploma Mathematics--II, Unit: Conics}
+\Level{11th}
+\Question{Focus of $y^{2}=4ax$?}
+\Explain{Standard parabola $y^{2}=4ax$ has focus at $(a,0)$.}
+\Answer{$(a,0)$}
+\Formula{Parabola standard form relations.}
+
+\item
+\Topic{Complex Roots of Unity}
+\From{Diploma Mathematics--I, Unit: Complex Numbers}
+\Level{11th}
+\Question{Find cube roots of unity other than 1.}
+\Explain{Non-real roots are $e^{2\pi i/3}$ and $e^{4\pi i/3}$, equal to $-\tfrac{1}{2}\pm i\dfrac{\sqrt3}{2}$.}
+\Answer{$-\tfrac{1}{2}\pm i\dfrac{\sqrt3}{2}$}
+\Formula{Euler form $e^{i\theta}$.}
+
+\item
+\Topic{Orthogonal Vectors}
+\From{Diploma Mathematics--I, Unit: Vectors}
+\Level{11th}
+\Question{If $\vec a$ and $\vec b$ are orthogonal nonzero vectors, what is $\vec a\cdot\vec b$?}
+\Explain{Orthogonal means perpendicular; dot product is zero.}
+\Answer{$0$}
+\Formula{$\vec a\cdot\vec b=0$ if orthogonal.}
+
+\item
+\Topic{Convergent Series}
+\From{Diploma Mathematics--I, Unit: Series}
+\Level{12th}
+\Question{Does $\sum_{n=1}^{\infty}\dfrac{1}{n^{2}}$ converge? If yes, to what?}
+\Explain{p-series with $p=2>1$ so it converges. Known value $\sum_{n=1}^{\infty}\dfrac{1}{n^{2}}=\dfrac{\pi^{2}}{6}$.}
+\Answer{$\dfrac{\pi^{2}}{6}$}
+\Formula{p-series test.}
+
+\item
+\Topic{Circle Equation}
+\From{Diploma Mathematics--II, Unit: Coordinate Geometry}
+\Level{11th}
+\Question{Equation of circle with centre $(h,k)$ and radius $r$?}
+\Explain{$(x-h)^{2}+(y-k)^{2}=r^{2}$.}
+\Answer{$(x-h)^{2}+(y-k)^{2}=r^{2}$}
+\Formula{Circle standard equation.}
+
+\item
+\Topic{Maclaurin Series}
+\From{Diploma Mathematics--II, Unit: Series}
+\Level{12th}
+\Question{First terms of $e^{x}$ Maclaurin expansion?}
+\Explain{$e^{x}=1+x+\dfrac{x^{2}}{2!}+\dots$.}
+\Answer{$1+x+\dfrac{x^{2}}{2}+\dots$}
+\Formula{Series for $e^{x}$.}
+
+\item
+\Topic{Simple Harmonic Motion}
+\From{Physics / Maths (Applied)}
+\Level{Diploma}
+\Question{Solve $x''+\omega^{2}x=0$.}
+\Explain{General solution $x(t)=A\cos\omega t + B\sin\omega t$.}
+\Answer{$x(t)=A\cos\omega t + B\sin\omega t$}
+\Formula{SHM solution; period $T=2\pi/\omega$.}
+
+\end{enumerate}
+% ------------------ End Block: Mathematics (Q1 - Q40) ------------------
+
+% ---------------------- Block: Physics, Chemistry & Mechanics (Q41 - Q80) ----------------------
+\section*{Physics, Chemistry and Mechanics (Q41--Q80)}
+
+\begin{enumerate}[leftmargin=10pt,label=\textbf{Q\arabic*.},resume]
+
+% PHYSICS Q41–Q60
+\item
+\Topic{Units and Dimensions}
+\From{Applied Physics–I, Unit: Measurements}
+\Level{Diploma}
+\Question{What are the base SI units for length, mass and time?}
+\Explain{Length = metre (m), mass = kilogram (kg), time = second (s).}
+\Answer{m, kg, s}
+\Formula{Base units: [L], [M], [T].}
+
+\item
+\Topic{Kinematics – Acceleration}
+\From{Applied Physics–I, Unit: Motion}
+\Level{Diploma}
+\Question{A body starting from rest attains velocity $v$ after time $t$ with uniform acceleration $a$. Show $v=at$.}
+\Explain{Acceleration $a=(v-u)/t$, $u=0 \Rightarrow v=at$.}
+\Answer{$v=at$}
+\Formula{$a=(v-u)/t$.}
+
+\item
+\Topic{Equation of Motion}
+\From{Applied Physics–I, Unit: Motion}
+\Level{Diploma}
+\Question{Derive $s=ut+\tfrac12at^2$.}
+\Explain{Average velocity $(u+v)/2$, with $v=u+at$ gives $s=ut+\tfrac12at^2$.}
+\Answer{$s=ut+\tfrac12at^2$}
+\Formula{Second equation of motion.}
+
+\item
+\Topic{Newton’s Second Law}
+\From{Applied Physics–I, Unit: Dynamics}
+\Level{Diploma}
+\Question{State Newton’s second law of motion.}
+\Explain{Rate of change of momentum equals applied force: $\vec F=m\vec a$.}
+\Answer{$\vec F=m\vec a$}
+\Formula{$F=ma$.}
+
+\item
+\Topic{Momentum Conservation}
+\From{Applied Physics–I, Unit: Dynamics}
+\Level{Diploma}
+\Question{State law of conservation of linear momentum.}
+\Explain{Total momentum of isolated system is constant when no external forces act.}
+\Answer{Total momentum constant}
+\Formula{$\sum m_iv_i=\text{constant}$.}
+
+\item
+\Topic{Work and Energy}
+\From{Applied Physics–I, Unit: Work, Power, Energy}
+\Level{Diploma}
+\Question{Define work done by constant force.}
+\Explain{$W=\vec F\cdot\vec s=Fs\cos\theta$.}
+\Answer{$W=Fs\cos\theta$}
+\Formula{$W=\vec F\cdot\vec s$.}
+
+\item
+\Topic{Power}
+\From{Applied Physics–I, Unit: Work, Power, Energy}
+\Level{Diploma}
+\Question{Define power and give its unit.}
+\Explain{$P=W/t$, unit watt (W) = J/s.}
+\Answer{$P=W/t$}
+\Formula{$P=\dfrac{dW}{dt}=Fv$.}
+
+\item
+\Topic{Kinetic Energy}
+\From{Applied Physics–I, Unit: Work, Power, Energy}
+\Level{Diploma}
+\Question{Derive expression for kinetic energy.}
+\Explain{Work-energy gives $W=\tfrac12m(v^2-u^2)$; if $u=0$ then $KE=\tfrac12mv^2$.}
+\Answer{$\tfrac12mv^2$}
+\Formula{$KE=\tfrac12mv^2$.}
+
+\item
+\Topic{Potential Energy of Spring}
+\From{Applied Physics–I, Unit: Elasticity}
+\Level{Diploma}
+\Question{Write the expression for potential energy stored in stretched spring.}
+\Explain{$U=\tfrac12kx^2$ (area under F–x curve).}
+\Answer{$\tfrac12kx^2$}
+\Formula{$U=\tfrac12kx^2$.}
+
+\item
+\Topic{Hooke’s Law}
+\From{Applied Physics–I, Unit: Elasticity}
+\Level{Diploma}
+\Question{State Hooke’s law.}
+\Explain{Within elastic limit, stress ∝ strain; $\sigma=E\epsilon$.}
+\Answer{$\sigma=E\epsilon$}
+\Formula{$E=\sigma/\epsilon$.}
+
+\item
+\Topic{Simple Pendulum}
+\From{Applied Physics–I, Unit: Oscillation}
+\Level{Diploma}
+\Question{Time period of simple pendulum of length $l$?}
+\Explain{$T=2\pi\sqrt{l/g}$.}
+\Answer{$2\pi\sqrt{l/g}$}
+\Formula{$T=2\pi\sqrt{l/g}$.}
+
+\item
+\Topic{Speed of Sound}
+\From{Applied Physics–I, Unit: Sound}
+\Level{Diploma}
+\Question{Formula for speed of sound in air.}
+\Explain{$v=\sqrt{\gamma RT/M}$.}
+\Answer{$\sqrt{\gamma RT/M}$}
+\Formula{Newton–Laplace relation.}
+
+\item
+\Topic{Snell’s Law}
+\From{Applied Physics–II, Unit: Optics}
+\Level{Diploma}
+\Question{State Snell’s law.}
+\Explain{$\dfrac{\sin i}{\sin r}=\dfrac{n_2}{n_1}$.}
+\Answer{$\sin i/\sin r=n_2/n_1$}
+\Formula{Snell’s law.}
+
+\item
+\Topic{Lens Formula}
+\From{Applied Physics–II, Unit: Optics}
+\Level{Diploma}
+\Question{Lens formula for thin lens.}
+\Explain{$\dfrac{1}{f}=\dfrac{1}{v}-\dfrac{1}{u}$ with sign convention.}
+\Answer{$\dfrac{1}{f}=\dfrac{1}{v}-\dfrac{1}{u}$}
+\Formula{Lens equation.}
+
+\item
+\Topic{Coulomb’s Law}
+\From{Applied Physics–II, Unit: Electrostatics}
+\Level{Diploma}
+\Question{State Coulomb’s law.}
+\Explain{$F=k\dfrac{q_1q_2}{r^2}$ along line joining charges.}
+\Answer{$F=k\dfrac{q_1q_2}{r^2}$}
+\Formula{$k=\dfrac{1}{4\pi\varepsilon_0}$.}
+
+\item
+\Topic{Electric Field}
+\From{Applied Physics–II, Unit: Electrostatics}
+\Level{Diploma}
+\Question{Define electric field intensity.}
+\Explain{$E=F/q$ for a test charge q.}
+\Answer{$E=F/q$}
+\Formula{Definition of field.}
+
+\item
+\Topic{Ohm’s Law}
+\From{Applied Physics–II, Unit: Current Electricity}
+\Level{Diploma}
+\Question{State Ohm’s law.}
+\Explain{$V=IR$ for linear resistor at constant temperature.}
+\Answer{$V=IR$}
+\Formula{Ohm’s law.}
+
+\item
+\Topic{Electric Power}
+\From{Applied Physics–II, Unit: Current Electricity}
+\Level{Diploma}
+\Question{Formula for electric power.}
+\Explain{$P=VI=I^{2}R=V^{2}/R$.}
+\Answer{$P=VI=I^{2}R=V^{2}/R$}
+\Formula{Power relations.}
+
+\item
+\Topic{Right-Hand Rule}
+\From{Applied Physics–II, Unit: Magnetism}
+\Level{Diploma}
+\Question{State right-hand thumb rule.}
+\Explain{Thumb along current, curled fingers show magnetic field direction around conductor.}
+\Answer{Right-hand rule direction}
+\Formula{Rule for field direction.}
+
+\item
+\Topic{Faraday’s Law}
+\From{Applied Physics–II, Unit: Electromagnetic Induction}
+\Level{Diploma}
+\Question{State Faraday’s law.}
+\Explain{Induced emf $e=-d\Phi/dt$.}
+\Answer{$e=-d\Phi/dt$}
+\Formula{Faraday’s law.}
+
+% CHEMISTRY & MECHANICS Q61–Q80
+\item
+\Topic{Ideal Gas Law}
+\From{Applied Chemistry–I, Unit: Gaseous State}
+\Level{Diploma}
+\Question{Write the ideal gas equation.}
+\Explain{$PV=nRT$.}
+\Answer{$PV=nRT$}
+\Formula{Ideal gas equation.}
+
+\item
+\Topic{Enthalpy Change}
+\From{Applied Chemistry–I, Unit: Thermodynamics}
+\Level{Diploma}
+\Question{Define enthalpy and its change.}
+\Explain{$H=U+PV$, and $\Delta H=\Delta U+P\Delta V$.}
+\Answer{$\Delta H=\Delta U+P\Delta V$}
+\Formula{$H=U+PV$.}
+
+\item
+\Topic{Ionic Bond}
+\From{Applied Chemistry–I, Unit: Chemical Bonding}
+\Level{11th}
+\Question{Define ionic bond and give an example.}
+\Explain{Electron transfer from metal to nonmetal forms ions; example NaCl.}
+\Answer{NaCl}
+\Formula{M + X → M^{+} + X^{-}.}
+
+\item
+\Topic{pH}
+\From{Applied Chemistry–I, Unit: Acids and Bases}
+\Level{Diploma}
+\Question{Define pH.}
+\Explain{$pH=-\log[H^{+}]$; measure of acidity.}
+\Answer{$pH=-\log[H^{+}]$}
+\Formula{pH definition.}
+
+\item
+\Topic{Nernst Equation}
+\From{Applied Chemistry–II, Unit: Electrochemistry}
+\Level{Diploma}
+\Question{Write the Nernst equation.}
+\Explain{$E=E^{\circ}-\dfrac{RT}{nF}\ln Q$.}
+\Answer{$E=E^{\circ}-\dfrac{RT}{nF}\ln Q$}
+\Formula{Nernst equation.}
+
+\item
+\Topic{Hardness of Water}
+\From{Applied Chemistry–II, Unit: Water Technology}
+\Level{Diploma}
+\Question{What causes hardness in water?}
+\Explain{Presence of Ca^{2+} and Mg^{2+} salts.}
+\Answer{Ca^{2+}, Mg^{2+}}
+\Formula{Hardness often expressed as mg CaCO_{3}/L.}
+
+\item
+\Topic{Polymerization}
+\From{Applied Chemistry–II, Unit: Polymers}
+\Level{Diploma}
+\Question{Define polymerization with example.}
+\Explain{Monomers join to form polymer; e.g., ethene → polyethylene.}
+\Answer{Polyethylene formation}
+\Formula{$nCH_{2}=CH_{2}\rightarrow(CH_{2}-CH_{2})_{n}$.}
+
+\item
+\Topic{Corrosion Prevention}
+\From{Applied Chemistry–II, Unit: Corrosion}
+\Level{Diploma}
+\Question{Name two methods to prevent corrosion.}
+\Explain{Painting/coating and cathodic protection.}
+\Answer{Painting, cathodic protection}
+\Formula{Protective methods.}
+
+\item
+\Topic{Viscosity}
+\From{Applied Chemistry–II, Unit: Lubricants}
+\Level{Diploma}
+\Question{Define viscosity.}
+\Explain{$\eta=\tau/(du/dy)$, internal resistance to flow.}
+\Answer{$\eta=\tau/(du/dy)$}
+\Formula{Viscosity definition.}
+
+\item
+\Topic{Moment of Force}
+\From{Engineering Mechanics, Unit: Statics}
+\Level{Diploma}
+\Question{Define moment of a force.}
+\Explain{$M=Fd$, turning effect about a point.}
+\Answer{$M=Fd$}
+\Formula{$M=\vec r\times\vec F$.}
+
+\item
+\Topic{Equilibrium}
+\From{Engineering Mechanics, Unit: Statics}
+\Level{Diploma}
+\Question{State equilibrium conditions for coplanar forces.}
+\Explain{$\sum F_x=0,\ \sum F_y=0,\ \sum M=0$.}
+\Answer{These three sums zero}
+\Formula{Statics equilibrium conditions.}
+
+\item
+\Topic{Centre of Gravity}
+\From{Engineering Mechanics, Unit: Centroid}
+\Level{Diploma}
+\Question{Define centre of gravity.}
+\Explain{Point where whole weight acts; for uniform body equals geometry centre.}
+\Answer{Point through which weight acts}
+\Formula{$\bar x=\dfrac{\sum x_iA_i}{\sum A_i}$.}
+
+\item
+\Topic{Mechanical Advantage}
+\From{Engineering Mechanics, Unit: Simple Machines}
+\Level{Diploma}
+\Question{Define mechanical advantage.}
+\Explain{$MA=\dfrac{\text{Load}}{\text{Effort}}$.}
+\Answer{$MA=W/P$}
+\Formula{$MA=\dfrac{\text{Load}}{\text{Effort}}$.}
+
+\item
+\Topic{Velocity Ratio of Pulleys}
+\From{Engineering Mechanics, Unit: Simple Machines}
+\Level{Diploma}
+\Question{Show that velocity ratio equals number of supporting ropes in ideal pulley.}
+\Explain{In ideal system distance by effort = n × distance of load ⇒ VR = n.}
+\Answer{$VR=n$}
+\Formula{Velocity ratio relation.}
+
+\item
+\Topic{Law of Machine}
+\From{Engineering Mechanics, Unit: Simple Machines}
+\Level{Diploma}
+\Question{State law of machine.}
+\Explain{$P=mW+C$ relating effort and load including constants.}
+\Answer{$P=mW+C$}
+\Formula{Law of machine form.}
+
+\item
+\Topic{Efficiency of Machine}
+\From{Engineering Mechanics, Unit: Simple Machines}
+\Level{Diploma}
+\Question{Define efficiency $\eta$ and give formula.}
+\Explain{$\eta$ is how effectively input becomes useful work. For simple machines $\eta=\dfrac{MA}{VR}\times100%$.}
+\Answer{$\eta=\dfrac{MA}{VR}\times100%$}
+\Formula{$\eta=\dfrac{MA}{VR}\times100%$.}
+
+\end{enumerate}
+
+% ---------------------- Block: Electrical, Logical & Formula Reference (Q81 - Q100) ----------------------
+\section*{Electrical, Logical and Formula Reference (Q81--Q100)}
+
+\begin{enumerate}[leftmargin=10pt,label=\textbf{Q\arabic*.},resume]
+
+% ELECTRICAL Q81–Q90
+\item
+\Topic{Ohm’s Law – Verification}
+\From{Basic Electrical Engineering, Unit: DC Circuits}
+\Level{Diploma}
+\Question{State and verify Ohm’s law.}
+\Explain{At constant temperature $V\propto I$. Plot of $V$ vs $I$ is straight line; slope = $R$.}
+\Answer{$V=IR$}
+\Formula{Ohm’s law.}
+
+\item
+\Topic{Resistors in Parallel}
+\From{Basic Electrical Engineering, Unit: Circuits}
+\Level{Diploma}
+\Question{Find equivalent resistance for $R_1$ and $R_2$ in parallel.}
+\Explain{$1/R_{eq}=1/R_1+1/R_2$.}
+\Answer{$R_{eq}=\dfrac{R_1R_2}{R_1+R_2}$}
+\Formula{Parallel formula.}
+
+\item
+\Topic{Kirchhoff’s Laws}
+\From{Basic Electrical Engineering, Unit: Network Theorems}
+\Level{Diploma}
+\Question{State Kirchhoff’s current and voltage laws.}
+\Explain{KCL: sum of currents at node = 0. KVL: sum of voltages around loop = 0.}
+\Answer{KCL and KVL}
+\Formula{Network laws.}
+
+\item
+\Topic{Power Factor}
+\From{Basic Electrical Engineering, Unit: AC Circuits}
+\Level{Diploma}
+\Question{Define power factor.}
+\Explain{$\cos\phi = P/S$, real/apparent power ratio.}
+\Answer{$\cos\phi=P/S$}
+\Formula{$P=VI\cos\phi$.}
+
+\item
+\Topic{Transformer Principle}
+\From{Basic Electrical Engineering, Unit: Transformers}
+\Level{Diploma}
+\Question{Working principle of transformer.}
+\Explain{Mutual induction: alternating primary current induces emf in secondary.}
+\Answer{Mutual induction}
+\Formula{$\dfrac{E_1}{E_2}=\dfrac{N_1}{N_2}$.}
+
+\item
+\Topic{DC Motor}
+\From{Basic Electrical Engineering, Unit: DC Machines}
+\Level{Diploma}
+\Question{Working principle of DC motor.}
+\Explain{Current in magnetic field experiences force → torque → rotation (Fleming’s left hand).}
+\Answer{Electromagnetic torque principle}
+\Formula{$F=BIL$.}
+
+\item
+\Topic{AC Generator}
+\From{Basic Electrical Engineering, Unit: AC Machines}
+\Level{Diploma}
+\Question{Principle of AC generator.}
+\Explain{Rotate coil in magnetic field; induced emf due to changing flux.}
+\Answer{Electromagnetic induction}
+\Formula{$e=-N\dfrac{d\Phi}{dt}$.}
+
+\item
+\Topic{Rectification}
+\From{Electronics Fundamentals, Unit: Diodes}
+\Level{Diploma}
+\Question{What is rectification?}
+\Explain{Conversion of AC to DC using diodes (half-wave/full-wave).}
+\Answer{AC to DC conversion}
+\Formula{Uses p–n junction behavior.}
+
+\item
+\Topic{Capacitance}
+\From{Basic Electrical Engineering, Unit: Electrostatics}
+\Level{Diploma}
+\Question{Define capacitance.}
+\Explain{$C=Q/V$. Unit farad (F).}
+\Answer{$C=\dfrac{Q}{V}$}
+\Formula{Capacitance definition.}
+
+\item
+\Topic{Inductive Reactance}
+\From{Basic Electrical Engineering, Unit: AC Circuits}
+\Level{Diploma}
+\Question{Formula for inductive reactance.}
+\Explain{$X_L=2\pi fL$.}
+\Answer{$X_L=2\pi fL$}
+\Formula{Inductive reactance.}
+
+% LOGICAL & GENERAL Q91–Q99
+\item
+\Topic{De Morgan’s Theorem}
+\From{Digital Logic, Unit: Logic Gates}
+\Level{Diploma}
+\Question{State De Morgan’s laws.}
+\Explain{$\overline{A+B}=\bar A\bar B$, $\overline{AB}=\bar A+\bar B$.}
+\Answer{De Morgan's laws}
+\Formula{Boolean simplification.}
+
+\item
+\Topic{Binary Conversion}
+\From{Digital Logic, Unit: Number Systems}
+\Level{Diploma}
+\Question{Convert $(1011)2$ to decimal.}
+\Explain{$1\cdot2^3+0\cdot2^2+1\cdot2^1+1\cdot2^0=8+0+2+1=11$.}
+\Answer{$11{10}$}
+\Formula{Binary to decimal.}
+
+\item
+\Topic{Logic Gates}
+\From{Digital Logic, Unit: Gates}
+\Level{Diploma}
+\Question{Boolean equations for AND, OR, NOT.}
+\Explain{AND: $Y=AB$; OR: $Y=A+B$; NOT: $Y=\bar A$.}
+\Answer{$AB,\ A+B,\ \bar A$}
+\Formula{Gate logic.}
+
+\item
+\Topic{SI Units}
+\From{Applied Physics–I, Unit: Measurement}
+\Level{Diploma}
+\Question{SI units of work, power, energy.}
+\Explain{Work/energy → J; Power → W.}
+\Answer{J, W}
+\Formula{Work = Force × distance.}
+
+\item
+\Topic{First Law of Thermodynamics}
+\From{Thermal Engineering}
+\Level{Diploma}
+\Question{State first law.}
+\Explain{$\Delta Q=\Delta U+\Delta W$.}
+\Answer{$\Delta Q=\Delta U+\Delta W$}
+\Formula{Energy conservation.}
+
+\item
+\Topic{COP of Refrigerator}
+\From{Thermal Engineering–II}
+\Level{Diploma}
+\Question{Define COP.}
+\Explain{$COP=\dfrac{Q_L}{W}$.}
+\Answer{$COP=\dfrac{Q_L}{W}$}
+\Formula{Coefficient of performance.}
+
+\item
+\Topic{Heat Transfer Modes}
+\From{Thermal Engineering}
+\Level{Diploma}
+\Question{List modes of heat transfer.}
+\Explain{Conduction, convection, radiation.}
+\Answer{Conduction, Convection, Radiation}
+\Formula{Fourier's law etc.}
+
+\item
+\Topic{Entropy}
+\From{Thermodynamics}
+\Level{Diploma}
+\Question{Define entropy change.}
+\Explain{$dS=\dfrac{\delta Q_{rev}}{T}$.}
+\Answer{$dS=\dfrac{\delta Q_{rev}}{T}$}
+\Formula{Entropy relation.}
+
+\item
+\Topic{Hydraulic Turbine Efficiency}
+\From{Fluid Mechanics}
+\Level{Diploma}
+\Question{Define turbine efficiency.}
+\Explain{$\eta=\dfrac{P_{out}}{P_{in}}\times100%$.}
+\Answer{$\eta=\dfrac{P_{out}}{P_{in}}\times100%$}
+\Formula{Machine efficiency.}
+
+\item
+\Topic{Lathe Operations}
+\From{Manufacturing Process}
+\Level{Diploma}
+\Question{State three basic operations on lathe.}
+\Explain{Turning, facing, threading.}
+\Answer{Turning, Facing, Threading}
+\Formula{Basic machining ops.}
+
+% Q100 Formula Reference
+\item
+\Topic{Comprehensive Formula Reference}
+\From{Entire JELET 2024 Paper}
+\Level{Diploma / 11th–12th}
+\Question{List important formulas used in the paper.}
+\Explain{Key formulas (compact): $V=IR$, $P=VI$, $E=-d\Phi/dt$, $F=ma$, $KE=\tfrac12mv^2$, $PV=nRT$, $\eta=\tfrac{MA}{VR}\times100%$, $T=2\pi\sqrt{l/g}$, $\sin^2\theta+\cos^2\theta=1$, $pH=-\log[H^+]$, $\Delta Q=\Delta U+\Delta W$, $Q=mc\Delta T$, $M=Fd$, $S_n=\tfrac{n(n+1)}{2}$, $\det(A)=\prod\lambda_i$.}
+\Answer{Collected key formulas.}
+\Formula{Comprehensive summary.}
+
+\end{enumerate}
+% ------------------ End Block: Q81 - Q100 ------------------
+Write it in html format. .. 1st it's a latex code.... Collect the data only need remove extra code</p>
+    </body>
+    </html>
